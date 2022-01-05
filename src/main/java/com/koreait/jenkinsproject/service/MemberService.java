@@ -2,7 +2,9 @@ package com.koreait.jenkinsproject.service;
 
 import java.util.Map;
 
-import com.koreait.ex15.domain.Member;
+import com.koreait.jenkinsproject.domain.Member;
+
+
 
 public interface MemberService {
 	public Map<String, Object> findAllMember(Integer page);  // memberManage.jsp 스크립트 보고 확인, 페이지로드!!

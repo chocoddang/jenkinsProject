@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
-import com.koreait.ex15.service.BoardService;
+import com.koreait.jenkinsproject.service.BoardService;
 
 import lombok.AllArgsConstructor;
 

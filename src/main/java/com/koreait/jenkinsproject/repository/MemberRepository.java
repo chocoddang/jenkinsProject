@@ -3,7 +3,9 @@ package com.koreait.jenkinsproject.repository;
 import java.util.List;
 import java.util.Map;
 
-import com.koreait.ex15.domain.Member;
+import com.koreait.jenkinsproject.domain.Member;
+
+
 
 public interface MemberRepository {
 	public int selectMemberCount();

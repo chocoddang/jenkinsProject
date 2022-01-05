@@ -6,15 +6,18 @@ import java.util.Map;
 
 import org.mybatis.spring.SqlSessionTemplate;
 
-import com.koreait.ex15.domain.Member;
-import com.koreait.ex15.repository.MemberRepository;
-import com.koreait.ex15.util.PageUtils;
+import com.koreait.jenkinsproject.domain.Member;
+import com.koreait.jenkinsproject.repository.MemberRepository;
+import com.koreait.jenkinsproject.util.PageUtils;
+
+
 
 public class MemberServiceImpl implements MemberService {
 
 	private MemberRepository repository;
 	
 	public MemberServiceImpl(SqlSessionTemplate sqlSession) {
+		//repository = sqlSession.getMapper(MemberRepository.class);
 		repository = sqlSession.getMapper(MemberRepository.class);
 	}
 	

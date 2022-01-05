@@ -17,6 +17,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import com.koreait.jenkinsproject.domain.Board;
+import com.koreait.jenkinsproject.domain.BoardAttach;
 import com.koreait.jenkinsproject.repository.BoardRepository;
 
 import net.coobird.thumbnailator.Thumbnails;
@@ -31,8 +32,8 @@ public class BoardServiceImpl implements BoardService {
 	}
 	
 	@Override
-	public Map<String, Object> addBoard(MultipartHttpServletRequest multipartRequest) {
-		
+	//public Map<String, Object> addBoard(MultipartHttpServletRequest multipartRequest) {
+	public Map<String, Object> addBoard(MultipartHttpServletRequest multipartRequest) {	
 		// 파라미터 처리
 		String writer = multipartRequest.getParameter("writer");
 		String title = multipartRequest.getParameter("title");
@@ -101,17 +102,16 @@ public class BoardServiceImpl implements BoardService {
 					// 썸네일 목록 저장
 					thumbnails.add("s_" + uuid + extension);
 					
-					// DB에 uuid, path, origin, fileType, boardNo 전달
 					BoardAttach boardAttach = new BoardAttach();
 					boardAttach.setUuid(uuid);
 					boardAttach.setPath(path);
 					boardAttach.setOrigin(origin);
-					boardAttach.setFileType("I");
+					boardAttach.setFiletype("I");
 					boardAttach.setBoardNo(board.getBoardNo());
 					
 					// DB에 boardAttach 저장
+					//boardAttachResult = boardRepository.insertBoardAttach(boardAttach);
 					boardAttachResult = boardRepository.insertBoardAttach(boardAttach);
-					
 				}
 				
 			} catch (Exception e) {

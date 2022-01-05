@@ -9,12 +9,11 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 
-import com.koreait.ex15.service.BoardAttachService;
-import com.koreait.ex15.service.BoardAttachServiceImpl;
-import com.koreait.ex15.service.BoardService;
-import com.koreait.ex15.service.BoardServiceImpl;
-import com.koreait.ex15.service.MemberService;
-import com.koreait.ex15.service.MemberServiceImpl;
+
+import com.koreait.jenkinsproject.service.BoardService;
+import com.koreait.jenkinsproject.service.BoardServiceImpl;
+import com.koreait.jenkinsproject.service.MemberService;
+import com.koreait.jenkinsproject.service.MemberServiceImpl;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 
@@ -66,10 +65,6 @@ public class RESTfulConfig {
 		return new BoardServiceImpl(sqlSession());
 	}
 	
-	@Bean
-	public BoardAttachService service3() throws Exception {
-		return new BoardAttachServiceImpl(sqlSession());
-	}
 	
 	
 	

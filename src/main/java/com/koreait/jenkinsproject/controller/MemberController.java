@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.koreait.ex15.domain.Member;
-import com.koreait.ex15.service.MemberService;
+import com.koreait.jenkinsproject.domain.Member;
+import com.koreait.jenkinsproject.service.MemberService;
 
 import lombok.AllArgsConstructor;
 

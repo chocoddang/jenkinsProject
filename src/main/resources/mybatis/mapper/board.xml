@@ -3,7 +3,7 @@
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 
-<mapper namespace="com.koreait.ex15.repository.BoardRepository">
+<mapper namespace="com.koreait.JenkinsProject.repository.BoardRepository">
 
 	<insert id="insertBoard" parameterType="Board">
 		<selectKey keyProperty="boardNo" order="BEFORE" resultType="Long">
