@@ -1,0 +1,23 @@
+package com.koreait.jenkinsproject.domain;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
+@Builder
+public class BoardAttach {
+
+	private String uuid;
+	private String path;
+	private String origin;
+	private String filetype;
+	private Long boardNo;
+}
